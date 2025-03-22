@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #ff0066;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #ff0066;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .register-btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    color: #fff;
+}
+
+.register-btn {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.login-btn:hover {
+    color: #ff0066;
+}
+
+.register-btn:hover {
+    background-color: #222;
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    height: calc(100vh - 80px);
+    padding: 0 10%;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: -20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hire-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+    background-color: #ff0066;
+    color: #fff;
+}
+
+.hero-image {
+    flex: 1;
+    background-image: url('https://avatars.githubusercontent.com/u/108179969?v=4');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-wrap: wrap;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        opacity: 0.4;
+        width: 100%;
+    }
+    
+    .hero-content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .auth-buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        order: 2;
+    }
+    
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    
+    header {
+        padding: 20px 5%;
+    }
+    
+    main {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
